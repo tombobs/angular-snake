@@ -1,0 +1,20 @@
+<div class="board" [class.board-overlay]="gameOver || paused"
+     [ngStyle]="{'grid-template-rows': gridStyle, 'grid-template-columns': gridStyle}">
+  <ng-container *ngFor="let row of squares;let rowIndex = index">
+    <div [class.has-food]="item.hasFood" [class.snake]="item.hasSnake" class="item"
+         *ngFor="let item of row;let columnIndex = index">
+    </div>
+  </ng-container>
+
+  <div class="overlay" *ngIf="gameOver">
+    <h3>Game over</h3>
+    <p>Your score: {{score}}</p>
+    <button (click)="tryAgain.emit()">Try again (space)</button>
+  </div>
+
+  <div class="overlay" *ngIf="paused">
+    <h3>Paused</h3>
+    <button (click)="unpause.emit()">Unpause (space)</button>
+  </div>
+
+</div>

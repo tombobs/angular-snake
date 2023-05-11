@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  height: 100%;
+  background-image: url('../assets/snake-bg_small.jpg');
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.panel {
+  background: white;
+  border: 15px solid black;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin: var(--padding);
+}

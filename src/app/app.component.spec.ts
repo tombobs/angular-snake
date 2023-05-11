@@ -1,27 +1,26 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NxWelcomeComponent } from './components/nx-welcome.component';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
-  }));
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'angular-snake'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-snake');
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AppComponent, NxWelcomeComponent],
+    }).compileComponents();
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-snake app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Welcome snake'
+    );
+  });
+
+  it(`should have as title 'snake'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('snake');
   });
 });
