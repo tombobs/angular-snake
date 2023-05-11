@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+}
+
+.panel {
+  border: 15px solid var(--border-color);
+  background: var(--panel-bg);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin: var(--padding);
+}

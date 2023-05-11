@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  &.pause {
+    margin-top: 10px;
+  }
+}
+
+.image {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+
+  &.arrows {
+    justify-content: center;
+  }
+}
+
+img {
+  width: 22%;
+
+  &.space-key {
+    width: 50%;
+  }
+}

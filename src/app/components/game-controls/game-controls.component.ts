@@ -8,4 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './game-controls.component.html',
   styleUrls: ['./game-controls.component.scss'],
 })
-export class GameControlsComponent {}
+export class GameControlsComponent {
+
+
+}

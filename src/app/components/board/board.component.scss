@@ -1,28 +1,29 @@
 $border: 1px solid blue;
-$boardSize: 30vw;
+$boardSize: 70vh;
 
-@media screen and (max-width: 400px) {
-
-  :host {
-    min-height: 90vw;
-    min-width: 90vw;
-  }
-}
 
 :host {
   display: block;
-  height: $boardSize;
-  width: $boardSize;
+
+  @media screen and (min-width: 400px) {
+    height: $boardSize;
+    width: $boardSize;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 90vw;
+    width: 90vw;
+  }
 }
 
 .board {
   display: grid;
-  padding: 15px;
+  padding: var(--padding);
   gap: 2px;
   height: 100%;
   width: 100%;
   position: relative;
-  background: black;
+  background: var(--border-color);
   border-radius: var(--border-radius);
 
   &.board-overlay:before {
@@ -61,10 +62,16 @@ $boardSize: 30vw;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  background: white;
-  padding: 15px;
-  border-radius: 15px;
+  background: var(--panel-bg);
+  padding: var(--padding);
+  border: var(--padding) solid var(--border-color);
+  border-radius: var(--border-radius);
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+}
+
+
+button {
+  background: var(--btn-color);
 }

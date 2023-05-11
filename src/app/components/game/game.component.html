@@ -1,0 +1,6 @@
+<snake-game-controls class="panel" />
+
+<snake-board (tryAgain)="startGame()" (unpause)="paused = false" [paused]="paused" [gameOver]="board.gameOver"
+             [squares]="(board.squares$ | async)!" [score]="board.score" />
+
+<snake-score class="panel" [score]="board.score" [highScore]="highScore" />
