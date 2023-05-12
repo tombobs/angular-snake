@@ -1,22 +1,5 @@
-<div class="row">
-  <div class="label"></div>
-  <div class="image">
-    <img src="assets/up-arrow-button-icon.svg" alt="" />
-  </div>
-</div>
+<snake-touch-controls *ngIf="isTouchDevice;else keyboardControls" />
 
-<div class="row">
-  <div class="label">Move</div>
-  <div class="image arrows">
-    <img src="assets/left-arrow-button-icon.svg" alt="" />
-    <img src="assets/down-arrow-button-icon.svg" alt="" />
-    <img src="assets/right-arrow-button-icon.svg" alt="" />
-  </div>
-</div>
-
-<div class="row pause">
-  <div class="label">Pause</div>
-  <div class="image arrows">
-    <img src="assets/space-button-icon.svg" alt="Space key" class="space-key" />
-  </div>
-</div>
+<ng-template #keyboardControls>
+  <snake-keyboard-controls />
+</ng-template>

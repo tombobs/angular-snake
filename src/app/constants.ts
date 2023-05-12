@@ -1,4 +1,4 @@
-export const boardSize = 50;
-export const gameFPS = 10;
+export const boardSize = 20;
+export const gameFPS = 5;
 export const gameLoopTime = 1000 / gameFPS;
 

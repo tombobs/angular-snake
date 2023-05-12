@@ -2,11 +2,12 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 * {
   box-sizing: border-box;
-  font-family: cursive;
+  font-family: Ubuntu cursive;
   font-weight: bold;
 }
 
@@ -17,3 +18,5 @@ html, body {
   --border-color: black;
   --btn-color: goldenrod;
 }
+
+@import "responsive";

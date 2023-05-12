@@ -1,15 +1,34 @@
+@import "responsive";
+
+$gap: 300px;
+$boardSize: min(70vw, 70vh);
+
 :host {
   display: flex;
   height: 100%;
-
-  align-items: center;
+  padding-top: 8vh;
   justify-content: center;
-  position: relative;
+  align-items: center;
   flex: 1;
 
-  @media screen and (max-width: 400px) {
+  @include respond-below(xs) {
     flex-direction: column;
+    padding-top: 0;
   }
+}
+
+snake-board {
+  grid-area: board;
+  width: $boardSize;
+  height: $boardSize;
+}
+
+snake-score {
+  grid-area: score;
+}
+
+snake-game-controls {
+  grid-area: controls;
 }
 
 .panel {

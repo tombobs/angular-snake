@@ -1,6 +1,6 @@
-<snake-game-controls class="panel" />
+<snake-game-controls [isTouchDevice]="isTouchDevice" class="panel" />
 
-<snake-board (tryAgain)="startGame()" (unpause)="paused = false" [paused]="paused" [gameOver]="board.gameOver"
-             [squares]="(board.squares$ | async)!" [score]="board.score" />
+<snake-board (tryAgain)="gameService.startGame(board)" (unpause)="gameService.paused = false" [paused]="gameService.paused" [gameOver]="board.gameOver"
+             [squares]="(board.squares$ | async)!" [score]="board.score" [isTouchDevice]="isTouchDevice" />
 
-<snake-score class="panel" [score]="board.score" [highScore]="highScore" />
+<snake-score class="panel" [score]="board.score" [highScore]="gameService.highScore" />

@@ -3,6 +3,7 @@ import { BoardSquare, IBoardSquare } from './board-square';
 import { boardSize } from '../constants';
 import { Direction } from './direction';
 import { BehaviorSubject, Subject } from 'rxjs';
+import { GameControlsService } from '../services/game-controls.service';
 
 export class Board {
   private snake: Snake = new Snake();
@@ -12,7 +13,8 @@ export class Board {
   private _gameOver = false;
 
   squares$ = new BehaviorSubject<BoardSquare[][]>(this.squares);
-  reset$ = new Subject<void>();
+  //reset$ = new Subject<void>();
+
 
   step(direction: Direction): void {
     const move: IBoardSquare = this.getNextMove(direction);

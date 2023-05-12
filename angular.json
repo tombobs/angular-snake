@@ -13,6 +13,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "snake",
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -30,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/styles/main.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app/styles"]
+            }
           },
           "configurations": {
             "production": {
@@ -93,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/styles/main.scss"
             ],
             "scripts": []
           }

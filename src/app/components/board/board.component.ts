@@ -22,6 +22,9 @@ export class BoardComponent {
   @Input({required: true})
   paused!: boolean;
 
+  @Input({required: true})
+  isTouchDevice!: boolean;
+
   @Output()
   tryAgain = new EventEmitter<void>();
 

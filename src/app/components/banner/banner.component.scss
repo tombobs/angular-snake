@@ -6,5 +6,15 @@ a {
 }
 
 img {
-  width: 210px;
+
+  &.hide-below-md {
+    width: 210px;
+  }
+
+  &.show-below-md {
+    width: 45px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+  }
 }
